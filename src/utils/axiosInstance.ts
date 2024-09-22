@@ -7,9 +7,6 @@ dotenv.config();
 const API_KEY = process.env.SCHIPOL_API_KEY;
 const API_ID = process.env.SCHIPOL_API_ID;
 
-console.log("APP_KEY", API_KEY);
-console.log("APP_ID", API_ID);
-
 const SCHIPHOL_API_URL = "https://api.schiphol.nl";
 const axiosInstance = axios.create({
   baseURL: SCHIPHOL_API_URL,
