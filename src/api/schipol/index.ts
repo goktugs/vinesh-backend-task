@@ -5,14 +5,14 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
-    console.log("Fetching flights...");
+    const { airline } = req.query;
     const response = await axiosInstance.get("/public-flights/flights", {
       params: {
         includedelays: "false",
         page: "0",
+        airline: airline,
       },
     });
-    console.log("Fetched flights!");
 
     res.json(response.data);
   } catch (error: any) {
