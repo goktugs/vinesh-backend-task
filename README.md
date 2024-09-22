@@ -1,59 +1,38 @@
-# Express API Starter with Typescript
+This `package.json` file defines a starting point for building an Express API using TypeScript. Here’s a breakdown of its components:
 
-How to use this template:
+1. **Project Info:**
+   - **Name**: `vinesh-express-api`
+   - **Version**: `0.0.1`
+   - **Description**: "Starting point for building an Express API with TypeScript."
+   - **Main**: Points to the entry file `src/index.ts`.
 
-```sh
-npx create-express-api --typescript --directory my-api-name
-```
+2. **Scripts:**
+   - `"start"`: Runs the API using `ts-node` on port 3000.
+   - `"dev"`: Runs the API in development mode using `nodemon` to restart automatically on changes.
+   - `"build"`: Compiles the TypeScript code to JavaScript using `tsc`.
+   - `"start:dist"`: Runs the compiled JavaScript code from the `dist` directory.
+   - `"lint"`: Runs ESLint with the `--fix` option on the `src` and `test` folders to automatically fix linting issues.
+   - `"test"`: Runs tests using `jest`.
+   - `"typecheck"`: Performs a type check without emitting any compiled files.
 
-Includes API Server utilities:
+3. **Dependencies**:
+   - **Express**: The core web framework for building APIs.
+   - **Axios**: For making HTTP requests.
+   - **bcrypt**: For password hashing and comparison.
+   - **cors**: To enable cross-origin resource sharing.
+   - **dotenv**: For loading environment variables from `.env` files.
+   - **helmet**: For security-related HTTP headers.
+   - **jsonwebtoken**: For generating and verifying JWT tokens.
+   - **mongodb** and **mongoose**: To work with MongoDB databases.
+   - **morgan**: For logging HTTP requests.
 
-* [morgan](https://www.npmjs.com/package/morgan)
-  * HTTP request logger middleware for node.js
-* [helmet](https://www.npmjs.com/package/helmet)
-  * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
-* [dotenv](https://www.npmjs.com/package/dotenv)
-  * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
-* [cors](https://www.npmjs.com/package/cors)
-  * CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+4. **Dev Dependencies**:
+   - **TypeScript**: The TypeScript language itself.
+   - **ts-node**: To run TypeScript files directly in Node.js without precompiling.
+   - **nodemon**: For automatically restarting the server during development.
+   - **Jest and Supertest**: For testing, including integration tests.
+   - **ESLint**: For linting the TypeScript code.
+   - **Airbnb ESLint Configuration**: Follows Airbnb’s style guide for TypeScript.
+   - **Various @types packages**: For TypeScript type definitions of the libraries (like Express, bcrypt, JWT, etc.).
 
-Development utilities:
-
-* [typescript](https://www.npmjs.com/package/typescript)
-  * TypeScript is a language for application-scale JavaScript.
-* [ts-node](https://www.npmjs.com/package/ts-node)
-  * TypeScript execution and REPL for node.js, with source map and native ESM support.
-* [nodemon](https://www.npmjs.com/package/nodemon)
-  * nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
-* [eslint](https://www.npmjs.com/package/eslint)
-  * ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
-* [typescript-eslint](https://typescript-eslint.io/)
-  * Tooling which enables ESLint to support TypeScript.
-* [jest](https://www.npmjs.com/package/jest)
-  * Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
-* [supertest](https://www.npmjs.com/package/supertest)
-  * HTTP assertions made easy via superagent.
-
-## Setup
-
-```
-npm install
-```
-
-## Lint
-
-```
-npm run lint
-```
-
-## Test
-
-```
-npm run test
-```
-
-## Development
-
-```
-npm run dev
-```
+This is a well-rounded setup for developing a secure, testable, and scalable API using Express and TypeScript. It includes robust linting, security, and testing mechanisms.
